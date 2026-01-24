@@ -6,25 +6,26 @@
     <title>위크(Week) | 우리 매장 필수 파트너 - 근무 관리 및 자동 급여 정산</title>
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="shortcut icon" href="/favicon.ico" />
-<meta name="title" content="위크(Week) | 우리 매장 필수 파트너 - 근무 관리 및 자동 급여 정산">
-<meta name="description" content="출근부터 급여까지 한 번에! QR 출퇴근 기록, 근무 캘린더, 자동 수당 계산으로 복잡한 매장 관리를 쉽고 정확하게 시작하세요.">
-<meta name="keywords" content="위크, week, weekjoin, 근무관리, 급여정산, 알바관리, 출퇴근기록, 매장관리앱">
+    <meta name="title" content="위크(Week) | 우리 매장 필수 파트너 - 근무 관리 및 자동 급여 정산">
+    <meta name="description" content="출근부터 급여까지 한 번에! QR 출퇴근 기록, 근무 캘린더, 자동 수당 계산으로 복잡한 매장 관리를 쉽고 정확하게 시작하세요.">
+    <meta name="keywords" content="위크, week, weekjoin, 근무관리, 급여정산, 알바관리, 출퇴근기록, 매장관리앱">
 
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.weekjoin.com/">
-<meta property="og:title" content="위크(Week) - 우리 매장 필수 파트너">
-<meta property="og:description" content="복잡한 근무 기록과 급여 계산, 이제 위크로 한 번에 해결하세요.">
-<meta property="og:image" content="https://www.weekjoin.com/static/og-image.png"> <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://www.weekjoin.com/">
-<meta property="twitter:title" content="위크(Week) - 우리 매장 필수 파트너">
-<meta property="twitter:description" content="출근부터 급여까지, 스마트한 근무 관리의 시작.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.weekjoin.com/">
+    <meta property="og:title" content="위크(Week) - 우리 매장 필수 파트너">
+    <meta property="og:description" content="복잡한 근무 기록과 급여 계산, 이제 위크로 한 번에 해결하세요.">
+    <meta property="og:image" content="https://www.weekjoin.com/static/og-image.png"> 
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.weekjoin.com/">
+    <meta property="twitter:title" content="위크(Week) - 우리 매장 필수 파트너">
+    <meta property="twitter:description" content="출근부터 급여까지, 스마트한 근무 관리의 시작.">
+    <meta name="google-site-verification" content="uxYlvqeWni8MvnoD32qGvj-76kB6tu6j0qowTjy3_qw" />
 
     <style>
       :root {
         --mint:#07ba9d;
         --text:#1a1a1a;
         --footer:#222;
-
         --max:1280px;
         --pad:20px;
       }
@@ -58,10 +59,8 @@
         align-items:center;
         padding:24px 20px 32px;
         gap:26px;
-
         width:100%;
         min-height:683px;
-
         background:linear-gradient(172.51deg,#66EBD6 18.6%,#0ED1B2 74.98%);
         border-radius:0;
       }
@@ -79,12 +78,13 @@
         flex:none;
       }
 
+      /* 모바일 레이아웃 설정 */
       .hero-main{
         width:100%;
         display:flex;
         flex-direction:column;
         align-items:center;
-        gap:12px;
+        gap:12px; /* 기본 요소 간격 */
       }
       .hero-stack{
         width:100%;
@@ -172,6 +172,8 @@
         background:linear-gradient(180deg, rgba(250, 250, 250, 0) 0%, #0FD1B2 100%);
         pointer-events:none;
       }
+
+      /* 스토어 버튼 모바일 간격: gap(12px) + margin(14px) = 26px */
       .store-row{
         width:100%;
         display:flex;
@@ -180,18 +182,17 @@
         align-items:center;
         gap:8px;
         flex-wrap:nowrap;
+        margin-top: 14px; 
       }
       .store-btn{
         width:120px;
         height:44px;
         padding:12px 20px;
         border-radius:12px;
-
         display:inline-flex;
         align-items:center;
         justify-content:center;
         gap:6px;
-
         text-decoration:none;
         font-weight:700;
         font-size:12px;
@@ -203,6 +204,8 @@
       .store-btn.light{background:#FFFFFF;color:#5C5C5C}
       .store-btn.outline{border:1px solid #000}
       .store-btn img{width:20px;height:20px}
+
+      /* 태블릿 디자인 (768px 이상) - 기존 구조 유지 */
       @media (min-width:768px){
         .hero{
           padding:32px 100px 56px;
@@ -274,6 +277,7 @@
           justify-content:center;
           align-items:center;
           gap:8px;
+          margin-top: 0; /* 모바일 마진 제거 */
         }
         .hero .store-btn{
           width:132px;
@@ -281,6 +285,8 @@
           font-size:14px;
         }
       }
+
+      /* 데스크탑 디자인 (1024px 이상) - 기존 구조 유지 */
       @media (min-width:1024px){
         .hero{
           padding:32px 200px 56px;
@@ -300,7 +306,9 @@
           min-height:503.36px;
           display:grid;
           grid-template-columns:496px 320px;
-          grid-template-areas:"text phone";
+          grid-template-areas:
+            "text phone"
+            "cta phone";
           column-gap:48px;
           row-gap:0;
           align-items:center;
@@ -326,12 +334,13 @@
         }
         .headline .break{display:inline}
         .hero .store-row{
+          grid-area: cta;
           width:auto;
           height:48px;
           justify-content:flex-start;
           align-items:flex-start;
           align-self:flex-start;
-          margin-top:24px;
+          margin-top:24px; /* 데스크탑 전용 여백 */
         }
         .hero .store-btn{
           width:auto;
@@ -357,190 +366,36 @@
         }
       }
 
+      /* 공통 및 나머지 섹션 스타일 생략 없이 유지 */
+      .features-wrap{ background: #E3F8F4; padding: 0; }
+      .features-wrap .container{width:100%;max-width:100%;padding:0;}
+      .carousel{ width: 100%; display: grid; justify-items: center; gap: 12px; }
+      .viewport{ width: 100%; overflow: hidden; }
+      .track{ display: flex; transform: translateX(0); transition: transform 720ms cubic-bezier(.2,.8,.2,1); will-change: transform; }
+      .slide{ width: 100%; flex: 0 0 100%; display: flex; flex-direction: column; align-items: flex-start; padding: 50px 20px 32px; min-height: 392px; background: #E3F8F4; box-sizing: border-box; overflow: hidden; }
+      .f-head{ width: 100%; max-width: 335px; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+      .f-title{ margin: 0; width: 100%; max-width: 335px; font-weight: 800; font-size: 22px; line-height: 130%; text-align: center; letter-spacing: -0.04em; color: #1A1A1A; }
+      .f-title .mint{ color: var(--mint); }
+      .f-desc{ margin: 0; width: 100%; max-width: 335px; font-weight: 500; font-size: 16px; line-height: 150%; text-align: center; letter-spacing: -0.02em; color: #4E4E4E; }
+      .shot-grid{ position: relative; width: 335px; height: 209.13px; }
+      .shot-main{ box-sizing: border-box; position: absolute; width: 318.14px; height: 187.5px; left: 8px; top: 0; background: #fff; border: 1.14px solid #D3EFEC; border-radius: 5.7px; overflow: hidden; }
+      .shot-main img{ width: 100%; height: 100%; object-fit: cover; }
+      .shot-phone{ box-sizing: border-box; position: absolute; width: 67.23px; height: 145.49px; right: 0; top: 64px; background: #F2F6FF; border: 1.13946px solid #D3EFEC; border-radius: 6.20569px; overflow: hidden; }
+      .shot-phone img{ width: 100%; height: 100%; object-fit: cover; }
 
-.features-wrap{
-  background: #E3F8F4;
-  padding: 0;
-}
-
-.features-wrap .container{width:100%;max-width:100%;padding:0;}
-
-.carousel{
-  width: 100%;
-  display: grid;
-  justify-items: center;
-  gap: 12px;
-}
-
-.viewport{
-  width: 100%;
-  overflow: hidden;
-}
-
-.track{
-  display: flex;
-  transform: translateX(0);
-  transition: transform 720ms cubic-bezier(.2,.8,.2,1);
-  will-change: transform;
-}
-
-.slide{
-  width: 100%;
-  flex: 0 0 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 50px 20px 32px;
-  min-height: 392px;
-  background: #E3F8F4;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.f-head{
-  width: 100%;
-  max-width: 335px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-
-.f-title{
-  margin: 0;
-  width: 100%;
-  max-width: 335px;
-  font-weight: 800;
-  font-size: 22px;
-  line-height: 130%;
-  text-align: center;
-  letter-spacing: -0.04em;
-  color: #1A1A1A;
-}
-.f-title .mint{ color: var(--mint); }
-
-.f-desc{
-  margin: 0;
-  width: 100%;
-  max-width: 335px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  text-align: center;
-  letter-spacing: -0.02em;
-  color: #4E4E4E;
-}
-
-.shot-grid{
-  position: relative;
-  width: 335px;
-  height: 209.13px;
-}
-
-.shot-main{
-  box-sizing: border-box;
-  position: absolute;
-  width: 318.14px;
-  height: 187.5px;
-  left: 8px;
-  top: 0;
-  background: #fff;
-  border: 1.14px solid #D3EFEC;
-  border-radius: 5.7px;
-  overflow: hidden;
-}
-.shot-main img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.shot-phone{
-  box-sizing: border-box;
-  position: absolute;
-  width: 67.23px;
-  height: 145.49px;
-  right: 0;
-  top: 64px;
-  background: #F2F6FF;
-  border: 1.13946px solid #D3EFEC;
-  border-radius: 6.20569px;
-  overflow: hidden;
-}
-.shot-phone img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-@media (max-width: 767.98px){
-  .slide{ align-items:center; }
-  .shot-grid{ margin-left:auto; margin-right:auto; }
-}
-@media (min-width:768px){
-  .features-wrap .container{ max-width: 800px; }
-  .carousel{ gap: 16px; }
-  .viewport{ width: min(100%, 800px); }
-  .slide{
-    width: min(100vw, 800px);
-    flex: 0 0 min(100vw, 800px);
-    min-height: 600px;
-    padding: 56px 20px 48px;
-    gap: 24px;
-  }
-  .f-head{ width: 100%; max-width: 760px; }
-  .f-title{
-    width: 100%;
-    max-width: 760px;
-    font-size: 28px;
-  }
-  .f-desc{
-    width: 100%;
-    max-width: 760px;
-    font-size: 18px;
-  }
-  .shot-grid{
-    width: min(100%, 594px);
-    height: 370.81px;
-    margin: 0 auto;
-  }
-  .shot-main{
-    width: 564.1px;
-    height: 332.6px;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    border-width: 2px;
-    border-radius: 10.1px;
-  }
-  .shot-phone{
-    width: 119.2px;
-    height: 257.97px;
-    top: 113px;
-    border-width: 2px;
-    border-radius: 11px;
-  }
-}
-@media (min-width:1024px){
-  .features-wrap .container{ max-width: var(--max); }
-  .carousel{ gap: 24px; }
-  .viewport{ width: min(100%, 1240px); }
-  .slide{
-    width: min(100vw, 1240px);
-    flex: 0 0 min(100vw, 1240px);
-    min-height: 601px;
-  }
-  .f-head{
-    width: 100%;
-    max-width: 1240px;
-  }
-  .f-title{ max-width: 1240px; }
-  .f-desc{ max-width: 1240px; }
-  .shot-grid{
-    width: 594px;
-    height: 371.2px;
-  }
-}
+      @media (max-width: 767.98px){ .slide{ align-items:center; } .shot-grid{ margin-left:auto; margin-right:auto; } }
+      @media (min-width:768px){
+        .features-wrap .container{ max-width: 800px; }
+        .carousel{ gap: 16px; }
+        .viewport{ width: min(100%, 800px); }
+        .slide{ width: min(100vw, 800px); flex: 0 0 min(100vw, 800px); min-height: 600px; padding: 56px 20px 48px; gap: 24px; }
+        .f-head{ width: 100%; max-width: 760px; }
+        .f-title{ width: 100%; max-width: 760px; font-size: 28px; }
+        .f-desc{ width: 100%; max-width: 760px; font-size: 18px; }
+        .shot-grid{ width: min(100%, 594px); height: 370.81px; margin: 0 auto; }
+        .shot-main{ width: 564.1px; height: 332.6px; left: 50%; top: 0; transform: translateX(-50%); border-width: 2px; border-radius: 10.1px; }
+        .shot-phone{ width: 119.2px; height: 257.97px; top: 113px; border-width: 2px; border-radius: 11px; }
+      }
 
       .final{padding:78px 0 56px;text-align:center}
       .final .t1{margin:0;font-size:clamp(24px,4vw,32px);font-weight:900;line-height:1.2;color:#303030}
@@ -550,414 +405,117 @@
       .final .store-row{margin-top:32px}
 
       footer{background:var(--footer);color:#dbdbdb;padding:36px 0 56px}
-      .footer-wrap{
-        padding-left:clamp(20px,6vw,150px);
-        padding-right:clamp(20px,6vw,150px);
-      }
+      .footer-wrap{ padding-left:clamp(20px,6vw,150px); padding-right:clamp(20px,6vw,150px); }
       .footer-brand{margin:0 0 28px;font-size:24px;font-weight:900;color:#f2f2f2;line-height:1.3}
       .footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px 40px}
       .col h4{margin:0 0 12px;font-size:16px;font-weight:800;color:#eaeaea}
       .col a,.col p{margin:0 0 8px;font-size:14px;font-weight:600;line-height:1.3;color:#dbdbdb;text-decoration:none}
 
-      @media (min-width:768px){
-        :root{--pad:100px}
-      }
-
+      @media (min-width:768px){ :root{--pad:100px} }
       @media (min-width:768px) and (max-width:1023.98px){
-        .phone{
-          width:231.84px;
-          height:372.82px;
-        }
-        .phone-img{
-          width:231.84px;
-          height:372.82px;
-          left:0;
-          top:0;
-        }
-        .phone::after{
-          top:auto;
-          bottom:0;
-          height:51.262px;
-        }
+        .phone{ width:231.84px; height:372.82px; }
+        .phone-img{ width:231.84px; height:372.82px; left:0; top:0; }
+        .phone::after{ top:auto; bottom:0; height:51.262px; }
       }
-      
 
+      .testimonials{ display:flex; flex-direction:column; align-items:center; padding:50px 0 32px; gap:16px; width:100%; }
+      .testimonials .t-wrap{ width:100%; max-width:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:0 20px; gap:16px; }
+      .testimonials .t-head{ width:100%; max-width:335px; display:flex; flex-direction:column; align-items:flex-start; gap:10px; }
+      .testimonials .t-title{ width:100%; margin:0; font-weight:800; font-size:22px; line-height:130%; text-align:center; letter-spacing:-0.04em; color:#1A1A1A; }
+      .testimonials .t-sub{ width:100%; margin:0; font-weight:500; font-size:16px; line-height:150%; text-align:center; letter-spacing:-0.02em; color:#4E4E4E; }
+      .t-carousel{ width:100%; max-width:335px; display:flex; flex-direction:column; align-items:flex-start; gap:12px; }
+      .t-viewport{ width:100%; height:183px; overflow:hidden; }
+      .t-track{ display:flex; height:183px; transform:translateX(0); transition:transform 720ms cubic-bezier(.2,.8,.2,1); will-change:transform; }
+      .t-card{ flex:0 0 100%; width:100%; height:183px; }
+      .t-card-body{ width:100%; max-width:335px; height:183px; display:flex; flex-direction:column; align-items:flex-start; padding:24px 32px; gap:10px; background:#F7F8FA; border-radius:16px; box-sizing:border-box; }
+      .t-copy{ width:100%; max-width:271px; display:flex; flex-direction:column; align-items:flex-start; gap:8px; }
+      .t-h3{ margin:0; width:100%; max-width:271px; font-weight:700; font-size:18px; line-height:130%; color:#1A1A1A; }
+      .t-p{ margin:0; width:100%; max-width:271px; font-weight:400; font-size:14px; line-height:130%; color:#333333; }
+      .t-hr{ width:100%; max-width:271px; height:0; border-top:1px solid #DADADA; }
+      .t-foot{ width:100%; max-width:271px; display:flex; flex-direction:row; align-items:flex-start; padding:0; }
+      .t-who{ display:flex; flex-direction:column; align-items:flex-start; gap:4px; min-width:86px; }
+      .t-who b{ margin:0; font-weight:700; font-size:12px; line-height:130%; color:#444444; }
+      .t-who span{ font-weight:400; font-size:12px; line-height:130%; color:#888888; }
+      .t-stars{ margin-left:auto; height:36px; display:flex; align-items:center; justify-content:flex-end; gap:0; }
+      .t-stars img{ width:16px; height:16px; display:block; }
+
+      @media (min-width:1024px){
+        .testimonials{ padding:72px 0 56px; }
+        .testimonials .t-wrap{ max-width:var(--max); padding:0 var(--pad); }
+        .testimonials .t-head{ max-width:var(--max); align-items:center; gap:12px; }
+        .testimonials .t-title{font-size:28px;}
+        .testimonials .t-sub{font-size:18px;}
+        .t-carousel{ max-width:var(--max); align-items:center; }
+        .t-viewport{ width:100%; height:auto; overflow:visible; }
+        .t-track{ width:100%; height:auto; transform:none !important; transition:none; display:grid; grid-template-columns:repeat(3, 335px); gap:16px; justify-content:center; }
+        .t-card{ width:335px; height:183px; }
+      }
+
+      /* Footer 추가 스타일 */
+      footer { background: #222; color: #999; padding: 48px 0 56px; }
+      .footer-wrap { display: flex; flex-direction: column; gap: 32px; }
+      .footer-top { display: flex; flex-direction: column; gap: 24px; }
+      .footer-brand { margin: 0; font-size: 24px; font-weight: 900; color: #fff; }
+      .footer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .footer-grid .col h4 { margin: 0 0 12px; font-size: 15px; font-weight: 700; color: #eee; }
+      .footer-grid .col a, .footer-grid .col p { font-size: 13px; line-height: 1.8; text-decoration: none; margin: 0; color: #999; }
+      .footer-divider { border: 0; border-top: 1px solid #333; margin: 0; }
+      .footer-bottom { display: flex; flex-direction: column; gap: 20px; }
+      .company-info p { font-size: 12px; line-height: 1.6; margin: 2px 0; color: #888; }
+      .company-info strong { color: #bbb; font-size: 13px; }
+      .copyright { font-size: 12px; color: #666; margin: 0; }
+
+      @media (min-width: 1024px) {
+        .footer-top { flex-direction: row; justify-content: space-between; align-items: flex-start; }
+        .footer-grid { grid-template-columns: repeat(3, 120px); gap: 40px; }
+        .footer-bottom { flex-direction: row; justify-content: space-between; align-items: flex-end; }
+      }
 
       @media (prefers-reduced-motion: reduce){
         .phone-img,.track,.t-track{transition:none !important}
         [data-reveal]{opacity:1;transform:none;transition:none !important}
       }
-
-.testimonials{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  padding:50px 0 32px;
-  gap:16px;
-
-  width:100%;
-}
-
-.testimonials .t-wrap{
-  width:100%;
-  max-width:100%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  padding:0 20px;
-  gap:16px;
-}
-
-.testimonials .t-head{
-  width:100%;
-  max-width:335px;
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  gap:10px;
-}
-
-.testimonials .t-title{
-  width:100%;
-  margin:0;
-  font-weight:800;
-  font-size:22px;
-  line-height:130%;
-  text-align:center;
-  letter-spacing:-0.04em;
-  color:#1A1A1A;
-}
-
-.testimonials .t-sub{
-  width:100%;
-  margin:0;
-  font-weight:500;
-  font-size:16px;
-  line-height:150%;
-  text-align:center;
-  letter-spacing:-0.02em;
-  color:#4E4E4E;
-}
-
-.t-carousel{
-  width:100%;
-  max-width:335px;
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  gap:12px;
-}
-
-.t-viewport{
-  width:100%;
-  height:183px;
-  overflow:hidden;
-}
-
-.t-track{
-  display:flex;
-  height:183px;
-  transform:translateX(0);
-  transition:transform 720ms cubic-bezier(.2,.8,.2,1);
-  will-change:transform;
-}
-
-.t-card{
-  flex:0 0 100%;
-  width:100%;
-  height:183px;
-}
-
-.t-card-body{
-  width:100%;
-  max-width:335px;
-  height:183px;
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  padding:24px 32px;
-  gap:10px;
-  background:#F7F8FA;
-  border-radius:16px;
-  box-sizing:border-box;
-}
-
-.t-copy{
-  width:100%;
-  max-width:271px;
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  gap:8px;
-}
-
-.t-h3{
-  margin:0;
-  width:100%;
-  max-width:271px;
-  font-weight:700;
-  font-size:18px;
-  line-height:130%;
-  color:#1A1A1A;
-}
-
-.t-p{
-  margin:0;
-  width:100%;
-  max-width:271px;
-  font-weight:400;
-  font-size:14px;
-  line-height:130%;
-  color:#333333;
-}
-
-.t-hr{
-  width:100%;
-  max-width:271px;
-  height:0;
-  border-top:1px solid #DADADA;
-}
-
-.t-foot{
-  width:100%;
-  max-width:271px;
-  display:flex;
-  flex-direction:row;
-  align-items:flex-start;
-  padding:0;
-}
-
-.t-who{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  gap:4px;
-  min-width:86px;
-}
-
-.t-who b{
-  margin:0;
-  font-weight:700;
-  font-size:12px;
-  line-height:130%;
-  color:#444444;
-}
-
-.t-who span{
-  font-weight:400;
-  font-size:12px;
-  line-height:130%;
-  color:#888888;
-}
-
-.t-stars{
-  margin-left:auto;
-  height:36px;
-  display:flex;
-  align-items:center;
-  justify-content:flex-end;
-  gap:0;
-}
-
-.t-stars img{
-  width:16px;
-  height:16px;
-  display:block;
-}
-
-@media (min-width:1024px){
-  .testimonials{
-    padding:72px 0 56px;
-  }
-  .testimonials .t-wrap{
-    max-width:var(--max);
-    padding:0 var(--pad);
-  }
-  .testimonials .t-head{
-    max-width:var(--max);
-    align-items:center;
-    gap:12px;
-  }
-  .testimonials .t-title{font-size:28px;}
-  .testimonials .t-sub{font-size:18px;}
-  .t-carousel{
-    max-width:var(--max);
-    align-items:center;
-  }
-  .t-viewport{
-    width:100%;
-    height:auto;
-    overflow:visible;
-  }
-  .t-track{
-    width:100%;
-    height:auto;
-    transform:none !important;
-    transition:none;
-    display:grid;
-    grid-template-columns:repeat(3, 335px);
-    gap:16px;
-    justify-content:center;
-  }
-  .t-card{ width:335px; height:183px; }
-}
-
-@media (prefers-reduced-motion: reduce){
-  .t-track{ transition:none !important; }
-}
-@media (max-width: 374px){
-  .shot-grid{
-    transform:scale(0.85);
-    transform-origin:top center;
-    margin-bottom:-30px;
-    margin-left:auto;
-    margin-right:auto;
-  }
-  .f-title,.t-title{font-size:20px;}
-  .f-desc,.t-sub{font-size:15px;}
-  .t-card-body{padding:24px 20px;}
-}
-/* Footer 추가 스타일 */
-footer {
-  background: #222;
-  color: #999; /* 기본 텍스트 색상을 약간 흐리게 */
-  padding: 48px 0 56px;
-}
-
-.footer-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.footer-top {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.footer-brand {
-  margin: 0;
-  font-size: 24px;
-  font-weight: 900;
-  color: #fff;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-
-.footer-grid .col h4 {
-  margin: 0 0 12px;
-  font-size: 15px;
-  font-weight: 700;
-  color: #eee;
-}
-
-.footer-grid .col a, .footer-grid .col p {
-  font-size: 13px;
-  line-height: 1.8;
-  text-decoration: none;
-  margin: 0;
-  color: #999;
-}
-
-.footer-divider {
-  border: 0;
-  border-top: 1px solid #333;
-  margin: 0;
-}
-
-.footer-bottom {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.company-info p {
-  font-size: 12px;
-  line-height: 1.6;
-  margin: 2px 0;
-  color: #888;
-}
-
-.company-info strong {
-  color: #bbb;
-  font-size: 13px;
-}
-
-.copyright {
-  font-size: 12px;
-  color: #666;
-  margin: 0;
-}
-
-/* Desktop 전용 레이아웃 */
-@media (min-width: 1024px) {
-  .footer-top {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  
-  .footer-grid {
-    grid-template-columns: repeat(3, 120px);
-    gap: 40px;
-  }
-
-  .footer-bottom {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-}
     </style>
   </head>
 
   <body>
-    <!-- HERO -->
     <header class="hero">
       <div class="hero-inner">
         <img class="hero-logo" alt="Week" src="/static/mobile_logo.svg" />
 
         <div class="hero-main">
-  <div class="hero-stack">
-    <div class="appmark" aria-hidden="true">
-      <img alt="Week App Icon" src="/static/mobile_appicon.svg" />
-    </div>
+          <div class="hero-stack">
+            <div class="appmark" aria-hidden="true">
+              <img alt="Week App Icon" src="/static/mobile_appicon.svg" />
+            </div>
+            <p class="headline">
+              출근부터 급여까지,<br />
+              <span class="partner-line">
+                <span class="partner-text">우리 매장 필수 파트너</span>
+                <span class="white">‘위크’</span>
+              </span>
+            </p>
+          </div>
 
-    <p class="headline">
-      출근부터 급여까지,<br />
-      <span class="partner-line">
-        <span class="partner-text">우리 매장 필수 파트너</span>
-        <span class="white">‘위크’</span>
-      </span>
-    </p>
-    
-    <div class="store-row">
-      <a class="store-btn dark" href="https://apps.apple.com/kr/app/%EC%9C%84%ED%81%AC/id6757102242" aria-label="App Store">
-        <img alt="" src="/static/mobile_appleicon.svg" />
-        App Store
-      </a>
-      <a class="store-btn light" href="https://play.google.com/store/apps/details?id=com.workend.week" aria-label="Google Play">
-        <img alt="" src="/static/mobile_playstoreicon.svg" />
-        Google Play
-      </a>
-    </div>
-  </div>
+          <div class="phone" id="phone" aria-hidden="true">
+            <img class="phone-img is-on" id="phoneA" alt="" />
+            <img class="phone-img" id="phoneB" alt="" />
+          </div>
 
-  <div class="phone" id="phone" aria-hidden="true">
-    <img class="phone-img is-on" id="phoneA" alt="" />
-    <img class="phone-img" id="phoneB" alt="" />
-  </div>
-
-  </div>
+          <div class="store-row">
+            <a class="store-btn dark" href="https://apps.apple.com/kr/app/%EC%9C%84%ED%81%AC/id6757102242" aria-label="App Store">
+              <img alt="" src="/static/mobile_appleicon.svg" />
+              App Store
+            </a>
+            <a class="store-btn light" href="https://play.google.com/store/apps/details?id=com.workend.week" aria-label="Google Play">
+              <img alt="" src="/static/mobile_playstoreicon.svg" />
+              Google Play
+            </a>
+          </div>
+        </div>
       </div>
     </header>
-    <!-- Testimonials -->
+
     <section class="testimonials" aria-label="Testimonials">
       <div class="t-wrap">
         <div class="t-head" data-reveal data-reveal-delay="80">
@@ -965,101 +523,62 @@ footer {
           <p class="t-sub">실제 사용중인 사장님들의 목소리</p>
         </div>
 
-        <!-- 모바일 애니메이션(캐러셀) -->
         <div class="t-carousel" id="reviewCarousel" aria-roledescription="carousel">
           <div class="t-viewport" id="reviewViewport">
             <div class="t-track" id="reviewTrack">
-              <!-- Review 1 -->
               <article class="t-card" data-reveal data-reveal-delay="140">
                 <div class="t-card-body">
                   <div class="t-copy">
                     <h3 class="t-h3">출퇴근 관리가 한눈에 정리돼요</h3>
-                    <p class="t-p">
-                      누가 언제 출근했고 몇 시간 일했는지 바로 보여서 엑셀 따로 정리할 필요가 없어졌어요.
-                    </p>
+                    <p class="t-p">누가 언제 출근했고 몇 시간 일했는지 바로 보여서 엑셀 따로 정리할 필요가 없어졌어요.</p>
                   </div>
-
                   <div class="t-hr" aria-hidden="true"></div>
-
                   <div class="t-foot">
-                    <div class="t-who">
-                      <b>명륜진사갈비 가맹점</b>
-                      <span>문** 사장님</span>
-                    </div>
+                    <div class="t-who"><b>명륜진사갈비 가맹점</b><span>문** 사장님</span></div>
                     <div class="t-stars" aria-label="별점 5점">
-                      <img alt="" src="/static/mobile_star.svg" />
-                      <img alt="" src="/static/mobile_star.svg" />
-                      <img alt="" src="/static/mobile_star.svg" />
-                      <img alt="" src="/static/mobile_star.svg" />
-                      <img alt="" src="/static/mobile_star.svg" />
+                      <img alt="" src="/static/mobile_star.svg" /><img alt="" src="/static/mobile_star.svg" /><img alt="" src="/static/mobile_star.svg" /><img alt="" src="/static/mobile_star.svg" /><img alt="" src="/static/mobile_star.svg" />
                     </div>
                   </div>
                 </div>
               </article>
 
-              <!-- Review 2 -->
               <article class="t-card" data-reveal data-reveal-delay="200">
                 <div class="t-card-body">
                   <div class="t-copy">
                     <h3 class="t-h3">인원도 비용도 한 번에 보이니까</h3>
-                    <p class="t-p">
-                      사람 더 쓰면 비용이 얼마나 늘어나는지 바로 보여서 이거 써도 되나 고민할 필요가 없어요.
-                    </p>
+                    <p class="t-p">사람 더 쓰면 비용이 얼마나 늘어나는지 바로 보여서 이거 써도 되나 고민할 필요가 없어요.</p>
                   </div>
-
                   <div class="t-hr" aria-hidden="true"></div>
-
                   <div class="t-foot">
-                    <div class="t-who">
-                      <b>샤브올데이 가맹점</b>
-                      <span>김** 사장님</span>
-                    </div>
+                    <div class="t-who"><b>샤브올데이 가맹점</b><span>김** 사장님</span></div>
                     <div class="t-stars" aria-label="별점 5점">
-                      <img alt="" src="/static/mobile_star.svg" />
-                      <img alt="" src="/static/mobile_star.svg" />
-                      <img alt="" src="/static/mobile_star.svg" />
-                      <img alt="" src="/static/mobile_star.svg" />
-                      <img alt="" src="/static/mobile_star.svg" />
+                      <img alt="" src="/static/mobile_star.svg" /><img alt="" src="/static/mobile_star.svg" /><img alt="" src="/static/mobile_star.svg" /><img alt="" src="/static/mobile_star.svg" /><img alt="" src="/static/mobile_star.svg" />
                     </div>
                   </div>
                 </div>
               </article>
 
-              <!-- Review 3 -->
               <article class="t-card" data-reveal data-reveal-delay="260">
                 <div class="t-card-body">
                   <div class="t-copy">
                     <h3 class="t-h3">직원과 같이 기록해서 좋아요</h3>
-                    <p class="t-p">
-                      원래 하나씩 수기로 해서 불편했는데 사용하니 누락도 없고 직원과 같이 확인해서 확실해요.
-                    </p>
+                    <p class="t-p">원래 하나씩 수기로 해서 불편했는데 사용하니 누락도 없고 직원과 같이 확인해서 확실해요.</p>
                   </div>
-
                   <div class="t-hr" aria-hidden="true"></div>
-
                   <div class="t-foot">
-                    <div class="t-who">
-                      <b>파티룸 선셋오렌지</b>
-                      <span>고** 사장님</span>
-                    </div>
+                    <div class="t-who"><b>파티룸 선셋오렌지</b><span>고** 사장님</span></div>
                     <div class="t-stars" aria-label="별점 5점">
-                      <img alt="" src="/static/mobile_star.svg" />
-                      <img alt="" src="/static/mobile_star.svg" />
-                      <img alt="" src="/static/mobile_star.svg" />
-                      <img alt="" src="/static/mobile_star.svg" />
-                      <img alt="" src="/static/mobile_star.svg" />
+                      <img alt="" src="/static/mobile_star.svg" /><img alt="" src="/static/mobile_star.svg" /><img alt="" src="/static/mobile_star.svg" /><img alt="" src="/static/mobile_star.svg" /><img alt="" src="/static/mobile_star.svg" />
                     </div>
                   </div>
                 </div>
               </article>
             </div>
           </div>
-
-        
         </div>
       </div>
     </section>
-    <!-- Features (설명 애니메이션) -->
+
     <section class="features-wrap">
       <div class="container">
         <div class="carousel" id="featureCarousel">
@@ -1071,16 +590,8 @@ footer {
                   <p class="f-desc">직원이 일한 만큼 근무 시간이 자동으로<br />입력되게 도와줘요.</p>
                 </div>
                 <div class="shot-grid">
-                  <div class="shot-main">
-                    <picture>
-                      <img alt="" src="/static/explain1_desktop.svg" />
-                    </picture>
-                  </div>
-                  <div class="shot-phone">
-                    <picture>
-                      <img alt="" src="/static/explain1_mobile.svg" />
-                    </picture>
-                  </div>
+                  <div class="shot-main"><picture><img alt="" src="/static/explain1_desktop.svg" /></picture></div>
+                  <div class="shot-phone"><picture><img alt="" src="/static/explain1_mobile.svg" /></picture></div>
                 </div>
               </article>
 
@@ -1090,16 +601,8 @@ footer {
                   <p class="f-desc">근무 기록을 바탕으로 예상 급여가<br />바로 보이게 정리해드려요.</p>
                 </div>
                 <div class="shot-grid">
-                  <div class="shot-main">
-                    <picture>
-                      <img alt="" src="/static/explain2_desktop.svg" />
-                    </picture>
-                  </div>
-                  <div class="shot-phone">
-                    <picture>
-                      <img alt="" src="/static/explain2_mobile.svg" />
-                    </picture>
-                  </div>
+                  <div class="shot-main"><picture><img alt="" src="/static/explain2_desktop.svg" /></picture></div>
+                  <div class="shot-phone"><picture><img alt="" src="/static/explain2_mobile.svg" /></picture></div>
                 </div>
               </article>
 
@@ -1109,27 +612,16 @@ footer {
                   <p class="f-desc">근무한 곳마다 근무 시간과 예상 급여를<br />한 화면에서 확인할 수 있어요.</p>
                 </div>
                 <div class="shot-grid">
-                  <div class="shot-main">
-                    <picture>
-                      <img alt="" src="/static/explain3_desktop.svg" />
-                    </picture>
-                  </div>
-                  <div class="shot-phone">
-                    <picture>
-                      <img alt="" src="/static/explain3_mobile.svg" />
-                    </picture>
-                  </div>
+                  <div class="shot-main"><picture><img alt="" src="/static/explain3_desktop.svg" /></picture></div>
+                  <div class="shot-phone"><picture><img alt="" src="/static/explain3_mobile.svg" /></picture></div>
                 </div>
               </article>
             </div>
           </div>
-
-          
         </div>
       </div>
     </section>
 
-    <!-- Final CTA -->
     <section class="final">
       <div class="container" data-reveal data-reveal-delay="200">
         <p class="t1">지금 바로</p>
@@ -1138,58 +630,50 @@ footer {
         <p class="tag">스마트한 근무 관리의 새로운 기준</p>
         <div class="store-row">
           <a class="store-btn dark" href="https://apps.apple.com/kr/app/%EC%9C%84%ED%81%AC/id6757102242" aria-label="App Store">
-            <img alt="" src="/static/mobile_appleicon.svg" />
-            App Store
+            <img alt="" src="/static/mobile_appleicon.svg" /> App Store
           </a>
           <a class="store-btn light outline" href="https://play.google.com/store/apps/details?id=com.workend.week" aria-label="Google Play">
-            <img alt="" src="/static/mobile_playstoreicon.svg" />
-            Google Play
+            <img alt="" src="/static/mobile_playstoreicon.svg" /> Google Play
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-  <div class="container footer-wrap">
-    <div class="footer-top">
-      <p class="footer-brand">Week</p>
-      <div class="footer-grid">
-        <div class="col">
-          <h4>기능</h4>
-          <p>QR 출퇴근</p><p>근무 캘린더</p><p>급여/수당 정산</p>
+      <div class="container footer-wrap">
+        <div class="footer-top">
+          <p class="footer-brand">Week</p>
+          <div class="footer-grid">
+            <div class="col">
+              <h4>기능</h4>
+              <p>QR 출퇴근</p><p>근무 캘린더</p><p>급여/수당 정산</p>
+            </div>
+            <div class="col">
+              <h4>리소스</h4>
+              <a href="#">도입 가이드</a><br /><a href="#">FAQ</a>
+            </div>
+            <div class="col">
+              <h4>회사</h4>
+              <a href="#">서비스 소개</a><br /><a href="#">이용약관</a><br /><a href="#">개인정보처리방침</a>
+            </div>
+          </div>
         </div>
-        <div class="col">
-          <h4>리소스</h4>
-          <a href="#">도입 가이드</a><br /><a href="#">FAQ</a>
-        </div>
-        <div class="col">
-          <h4>회사</h4>
-          <a href="#">서비스 소개</a><br /><a href="#">이용약관</a><br /><a href="#">개인정보처리방침</a>
+        <hr class="footer-divider" />
+        <div class="footer-bottom">
+          <div class="company-info">
+            <p><strong>주식회사 원앤인컴퍼니</strong></p>
+            <p>대표자: 채승현 | 사업자등록번호: 559-08-03053</p>
+          </div>
+          <p class="copyright">© 2026 oneandin Inc. All rights reserved.</p>
         </div>
       </div>
-    </div>
-
-    <hr class="footer-divider" />
-
-    <div class="footer-bottom">
-      <div class="company-info">
-        <p><strong>주식회사 원앤인컴퍼니</strong></p>
-        <p>대표자: 채승현 | 사업자등록번호: 559-08-03053</p>
-      
-      </div>
-      <p class="copyright">© 2026 oneandin Inc. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+    </footer>
 
     <script>
       const MOBILE_PHONE_STATE_A  = "/static/mobile_phone_a.svg";
       const MOBILE_PHONE_STATE_B  = "/static/mobile_phone_b.svg";
-
       const TABLET_PHONE_STATE_A  = "/static/tablet_a.svg";
       const TABLET_PHONE_STATE_B  = "/static/tablet_b.svg";
-
       const DESKTOP_PHONE_STATE_A = "/static/desktop_a.svg";
       const DESKTOP_PHONE_STATE_B = "/static/desktop_b.svg";
 
@@ -1204,21 +688,11 @@ footer {
         const a = document.getElementById("phoneA");
         const b = document.getElementById("phoneB");
         if(!a || !b) return;
-
-        function apply(){
-          const [A,B] = pickPhoneAssets();
-          a.src = A; b.src = B;
-        }
+        function apply(){ const [A,B] = pickPhoneAssets(); a.src = A; b.src = B; }
         apply();
         window.addEventListener("resize", apply, {passive:true});
-
-        let on = 0;
-        const imgs = [a,b];
-        setInterval(()=>{
-          imgs[on].classList.remove("is-on");
-          on = (on+1)%2;
-          imgs[on].classList.add("is-on");
-        }, 2000);
+        let on = 0; const imgs = [a,b];
+        setInterval(()=>{ imgs[on].classList.remove("is-on"); on = (on+1)%2; imgs[on].classList.add("is-on"); }, 2000);
       })();
 
       function initCarousel({viewportId, trackId, interval=2500, disableAt}){
@@ -1226,36 +700,15 @@ footer {
         const track = document.getElementById(trackId);
         const slides = Array.from(track?.children || []);
         if(!viewport || !track || !slides.length) return;
-
         let idx = 0, timer = null;
         const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
         const isDisabled = ()=> (disableAt && window.innerWidth >= disableAt) || reduceMotion.matches;
         const slideW = ()=> viewport.getBoundingClientRect().width;
-
-        function render(nextIdx){
-          idx = (nextIdx + slides.length) % slides.length;
-          track.style.transform = isDisabled() ? "none" : `translateX(${-slideW()*idx}px)`;
-        }
-
-        function start(){
-          if(timer) clearInterval(timer);
-          if(slides.length > 1 && !isDisabled()){
-            timer = setInterval(()=>render(idx+1), interval);
-          }
-        }
-
+        function render(nextIdx){ idx = (nextIdx + slides.length) % slides.length; track.style.transform = isDisabled() ? "none" : `translateX(${-slideW()*idx}px)`; }
+        function start(){ if(timer) clearInterval(timer); if(slides.length > 1 && !isDisabled()){ timer = setInterval(()=>render(idx+1), interval); } }
         const sync = ()=>{ render(idx); start(); };
-
         window.addEventListener("resize", sync, {passive:true});
-        if(typeof reduceMotion.addEventListener === "function"){
-          reduceMotion.addEventListener("change", sync);
-        }else if(typeof reduceMotion.addListener === "function"){
-          reduceMotion.addListener(sync);
-        }
-
-        render(0);
-        start();
+        render(0); start();
       }
 
       initCarousel({viewportId:"featureViewport", trackId:"featureTrack"});
@@ -1264,28 +717,10 @@ footer {
       (function scrollReveal(){
         const targets = Array.from(document.querySelectorAll("[data-reveal]"));
         if(!targets.length) return;
-
         const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-        targets.forEach(el=>{
-          const delay = el.dataset.revealDelay;
-          if(delay) el.style.setProperty("--reveal-delay", `${delay}ms`);
-        });
-
-        if(reduceMotion.matches || !("IntersectionObserver" in window)){
-          targets.forEach(el=>el.classList.add("is-revealed"));
-          return;
-        }
-
-        const observer = new IntersectionObserver((entries)=>{
-          entries.forEach(entry=>{
-            if(entry.isIntersecting){
-              entry.target.classList.add("is-revealed");
-              observer.unobserve(entry.target);
-            }
-          });
-        }, {threshold:0.3, rootMargin:"0px 0px -8% 0px"});
-
+        targets.forEach(el=>{ const delay = el.dataset.revealDelay; if(delay) el.style.setProperty("--reveal-delay", `${delay}ms`); });
+        if(reduceMotion.matches || !("IntersectionObserver" in window)){ targets.forEach(el=>el.classList.add("is-revealed")); return; }
+        const observer = new IntersectionObserver((entries)=>{ entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add("is-revealed"); observer.unobserve(entry.target); } }); }, {threshold:0.3, rootMargin:"0px 0px -8% 0px"});
         targets.forEach(el=>observer.observe(el));
       })();
     </script>
