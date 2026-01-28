@@ -183,7 +183,7 @@
         justify-content:center;
         align-items:center;
         gap:8px;
-        flex-wrap:nowrap;
+        flex-wrap:wrap;
         margin-top: 14px; 
       }
       .store-btn{
@@ -206,6 +206,17 @@
       .store-btn.light{background:#FFFFFF;color:#5C5C5C}
       .store-btn.outline{border:1px solid #000}
       .store-btn img{width:20px;height:20px}
+      .store-btn svg {
+  width: 20px;
+  height: 20px;
+  display: block;  /* 레이아웃 깨짐 방지 */
+  flex: none;      /* 좁은 화면에서도 아이콘이 찌그러지지 않도록 고정 */
+}
+      .store-btn.mint {
+        background: var(--mint); /* 브랜드 컬러 사용 */
+        color: #fff;
+        border: 1px solid var(--mint);
+      }
 
       /* 태블릿 디자인 (768px 이상) - 기존 구조 유지 */
       @media (min-width:768px){
@@ -483,8 +494,7 @@
   <body>
     <header class="hero">
       <div class="hero-inner">
-        <!-- <img class="hero-logo" alt="Week" src="/static/mobile_logo.svg" /> -->
-        <h1>위크</h1>
+        <img class="hero-logo" alt="Week" src="/static/mobile_logo.svg" />
 
         <div class="hero-main">
           <div class="hero-stack">
@@ -513,6 +523,12 @@
             <a class="store-btn light" href="https://play.google.com/store/apps/details?id=com.workend.week" aria-label="Google Play">
               <img alt="" src="/static/mobile_playstoreicon.svg" />
               Google Play
+            </a>
+            <a class="store-btn mint" href="https://mydreamday.shop" target="_blank" aria-label="Web Service">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 19.93C7.05 19.44 4 16.08 4 12C4 11.38 4.08 10.79 4.21 10.21L9 15V16C9 17.1 9.9 18 11 18V19.93ZM17.9 17.39C17.64 16.58 16.9 16 16 16H15V13C15 12.45 14.55 12 14 12H8V10H10C10.55 10 11 9.55 11 9V7H13C14.1 7 15 6.1 15 5V4.59C17.93 5.78 20 8.65 20 12C20 14.08 19.2 15.97 17.9 17.39Z" fill="white"/>
+              </svg>
+              Web 바로가기
             </a>
           </div>
         </div>
@@ -633,10 +649,18 @@
         <p class="tag">스마트한 근무 관리의 새로운 기준</p>
         <div class="store-row">
           <a class="store-btn dark" href="https://apps.apple.com/kr/app/%EC%9C%84%ED%81%AC/id6757102242" aria-label="App Store">
-            <img alt="" src="/static/mobile_appleicon.svg" /> App Store
+            <img alt="" src="/static/mobile_appleicon.svg" />
+            App Store
           </a>
-          <a class="store-btn light outline" href="https://play.google.com/store/apps/details?id=com.workend.week" aria-label="Google Play">
-            <img alt="" src="/static/mobile_playstoreicon.svg" /> Google Play
+          <a class="store-btn light" href="https://play.google.com/store/apps/details?id=com.workend.week" aria-label="Google Play">
+            <img alt="" src="/static/mobile_playstoreicon.svg" />
+            Google Play
+          </a>
+          <a class="store-btn mint" href="https://mydreamday.shop" target="_blank" aria-label="Web Service">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 19.93C7.05 19.44 4 16.08 4 12C4 11.38 4.08 10.79 4.21 10.21L9 15V16C9 17.1 9.9 18 11 18V19.93ZM17.9 17.39C17.64 16.58 16.9 16 16 16H15V13C15 12.45 14.55 12 14 12H8V10H10C10.55 10 11 9.55 11 9V7H13C14.1 7 15 6.1 15 5V4.59C17.93 5.78 20 8.65 20 12C20 14.08 19.2 15.97 17.9 17.39Z" fill="white"/>
+            </svg>
+            Web 바로가기
           </a>
         </div>
       </div>
