@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>위크 블로그 | 무료 출퇴근 관리 앱 운영 가이드</title>
+    <meta name="description" content="무료 출퇴근 관리 앱 위크 블로그. 출퇴근 기록, 급여 자동 계산, 출근부 엑셀 대체 등 소상공인 매장 운영에 필요한 실전 가이드를 제공합니다." />
+    <link rel="canonical" href="https://www.weekjoin.com/blog/" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.weekjoin.com/blog/" />
+    <meta property="og:title" content="위크 블로그 | 무료 출퇴근 관리 앱 운영 가이드" />
+    <meta property="og:description" content="출퇴근 관리와 급여 정산에 바로 쓰는 실전 가이드를 확인하세요." />
+    <meta property="og:image" content="https://www.weekjoin.com/static/og-image.png" />
+    <style>
+      :root{
+        --mint:#07ba9d;
+        --text:#1a1a1a;
+        --muted:#4e4e4e;
+        --line:#e6ecea;
+        --max:1080px;
+      }
+      *{box-sizing:border-box}
+      body{
+        margin:0;
+        font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR",Arial,sans-serif;
+        color:var(--text);
+        background:#fff;
+      }
+      a{color:inherit}
+      .container{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+      .top{
+        padding:20px 0;
+        border-bottom:1px solid var(--line);
+        background:#fff;
+        position:sticky;
+        top:0;
+      }
+      .top-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+      .brand img{width:84px;height:auto;display:block}
+      .top-link{
+        text-decoration:none;
+        font-size:14px;
+        font-weight:700;
+        color:#303030;
+      }
+      .hero{
+        padding:42px 0 24px;
+        background:linear-gradient(174deg,#e8faf6 0%,#ffffff 66%);
+      }
+      .kicker{
+        margin:0;
+        font-size:13px;
+        font-weight:800;
+        color:var(--mint);
+        letter-spacing:.04em;
+        text-transform:uppercase;
+      }
+      h1{
+        margin:10px 0 10px;
+        font-size:clamp(30px,5vw,42px);
+        line-height:1.2;
+        letter-spacing:-0.03em;
+      }
+      .sub{
+        margin:0;
+        max-width:680px;
+        font-size:17px;
+        line-height:1.55;
+        color:var(--muted);
+      }
+      .grid{
+        padding:20px 0 64px;
+        display:grid;
+        grid-template-columns:1fr;
+        gap:12px;
+      }
+      .card{
+        text-decoration:none;
+        border:1px solid var(--line);
+        border-radius:16px;
+        background:#f9fbfb;
+        padding:20px;
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+      }
+      .card .tag{
+        margin:0;
+        font-size:12px;
+        font-weight:800;
+        color:var(--mint);
+        letter-spacing:.02em;
+        text-transform:uppercase;
+      }
+      .card h2{
+        margin:0;
+        font-size:22px;
+        line-height:1.35;
+        letter-spacing:-0.02em;
+      }
+      .card p{
+        margin:0;
+        font-size:15px;
+        line-height:1.55;
+        color:var(--muted);
+      }
+      .card .read{
+        margin-top:4px;
+        font-size:14px;
+        font-weight:700;
+      }
+      @media (min-width:768px){
+        .container{padding:0 28px}
+        .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+        .card{min-height:230px}
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <div class="container top-row">
+        <a class="brand" href="/"><img src="/static/mobile_bottom_logo.svg" alt="Week" /></a>
+        <a class="top-link" href="/">서비스 홈으로</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <p class="kicker">Week Blog</p>
+          <h1>사장님 운영 노하우</h1>
+          <p class="sub">무료 출퇴근 관리 앱, 급여 자동 계산, 출근부 엑셀 대체 등 실제 매장 운영에서 바로 적용할 수 있는 가이드만 모았습니다.</p>
+        </div>
+      </section>
+
+      <section class="container grid" aria-label="블로그 글 목록">
+        <a class="card" href="/blog/free-attendance-app-comparison/">
+          <p class="tag">Guide</p>
+          <h2>무료 출퇴근 관리 앱 비교: 소상공인이 먼저 봐야 할 5가지 기준</h2>
+          <p>무료 여부를 넘어서, 매장 운영 시간을 줄이는 기준으로 앱을 비교하는 방법을 정리했습니다.</p>
+          <span class="read">읽어보기</span>
+        </a>
+        <a class="card" href="/blog/parttime-payroll-auto-calculation/">
+          <p class="tag">Payroll</p>
+          <h2>알바 급여 자동 계산 방법: 사장님이 실수 줄이는 가장 쉬운 루틴</h2>
+          <p>출퇴근 데이터부터 급여 확인까지, 계산 실수를 줄이는 4단계 자동화 루틴을 안내합니다.</p>
+          <span class="read">읽어보기</span>
+        </a>
+        <a class="card" href="/blog/attendance-sheet-excel-alternative/">
+          <p class="tag">Operations</p>
+          <h2>출근부 엑셀 대신 앱을 써야 하는 이유: 운영 시간과 실수를 동시에 줄이기</h2>
+          <p>수기 출근부 운영의 한계와 앱 전환 시 달라지는 점을 실제 운영 관점에서 비교했습니다.</p>
+          <span class="read">읽어보기</span>
+        </a>
+      </section>
+    </main>
+  </body>
+</html>
