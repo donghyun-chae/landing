@@ -703,67 +703,6 @@
         }
       }
 
-      .onboarding{ padding:20px 0 40px; background:#fff; }
-      .onboarding-wrap{ max-width:980px; margin:0 auto; }
-      .onboarding-head{ text-align:center; margin-bottom:18px; }
-      .onboarding-title{ margin:0; font-size:22px; font-weight:800; line-height:130%; letter-spacing:-0.03em; color:#1A1A1A; }
-      .onboarding-sub{ margin:8px 0 0; font-size:15px; font-weight:500; line-height:150%; color:#4E4E4E; }
-      .onboarding-grid{ display:grid; grid-template-columns:1fr; gap:12px; }
-      .onboarding-card{
-        display:flex;
-        flex-direction:column;
-        gap:10px;
-        padding:18px;
-        border:1px solid #E6ECEA;
-        border-radius:16px;
-        background:#F9FBFB;
-      }
-      .onboarding-step{
-        margin:0;
-        width:28px;
-        height:28px;
-        border-radius:999px;
-        background:var(--mint);
-        color:#fff;
-        font-size:13px;
-        font-weight:800;
-        display:grid;
-        place-items:center;
-      }
-      .onboarding-card h3{ margin:0; font-size:18px; font-weight:700; line-height:140%; color:#1A1A1A; }
-      .onboarding-card p{ margin:0; font-size:14px; font-weight:500; line-height:155%; color:#4E4E4E; }
-      .onboarding-cta{
-        margin-top:18px;
-        display:flex;
-        justify-content:center;
-      }
-      .onboarding-link{
-        display:inline-flex;
-        align-items:center;
-        justify-content:center;
-        min-width:220px;
-        height:44px;
-        padding:0 18px;
-        border-radius:12px;
-        background:#fff;
-        border:1px solid #DDE4E2;
-        text-decoration:none;
-        font-size:14px;
-        font-weight:700;
-        color:#1A1A1A;
-      }
-
-      @media (min-width:768px){
-        .onboarding{ padding:28px 0 56px; }
-        .onboarding-head{ margin-bottom:24px; }
-        .onboarding-title{ font-size:28px; }
-        .onboarding-sub{ font-size:18px; }
-        .onboarding-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
-        .onboarding-card{ min-height:200px; padding:20px; }
-        .onboarding-card h3{ font-size:20px; }
-        .onboarding-card p{ font-size:15px; }
-      }
-
       /* Footer 추가 스타일 */
       footer { background: #222; color: #999; padding: 48px 0 56px; }
       .footer-wrap { display: flex; flex-direction: column; gap: 32px; }
@@ -1006,35 +945,6 @@
       </div>
     </section>
 
-    <section class="onboarding" id="guide" aria-label="도입 가이드">
-      <div class="container onboarding-wrap">
-        <div class="onboarding-head" data-reveal data-reveal-delay="120">
-          <h2 class="onboarding-title">도입 가이드</h2>
-          <p class="onboarding-sub">3단계로 오늘 바로 우리 매장에 적용하세요</p>
-        </div>
-        <div class="onboarding-grid">
-          <article class="onboarding-card" data-reveal data-reveal-delay="160">
-            <p class="onboarding-step">1</p>
-            <h3>엑셀 업로드하기</h3>
-            <p>기존 근무표 엑셀을 올리면 직원과 일정이 자동 분석되어 초기 세팅이 빨라집니다.</p>
-          </article>
-          <article class="onboarding-card" data-reveal data-reveal-delay="210">
-            <p class="onboarding-step">2</p>
-            <h3>직원 초대하기</h3>
-            <p>직원을 초대해 출퇴근 기록을 함께 시작하세요. 누락과 수기 정리 시간이 크게 줄어듭니다.</p>
-          </article>
-          <article class="onboarding-card" data-reveal data-reveal-delay="260">
-            <p class="onboarding-step">3</p>
-            <h3>근무·급여 확인하기</h3>
-            <p>기록된 데이터를 기반으로 근무시간과 예상 급여를 한 화면에서 매일 확인할 수 있습니다.</p>
-          </article>
-        </div>
-        <div class="onboarding-cta" data-reveal data-reveal-delay="300">
-          <a class="onboarding-link" href="#faq">자주 묻는 질문도 보기</a>
-        </div>
-      </div>
-    </section>
-
     <section class="final">
       <div class="container" data-reveal data-reveal-delay="200">
         <p class="t1">지금 바로</p>
@@ -1071,7 +981,7 @@
             </div>
             <div class="col">
               <h4>리소스</h4>
-              <a href="#guide">도입 가이드</a><br /><a href="#faq">FAQ</a><br /><a href="/blog/">블로그</a>
+              <a href="#faq">FAQ</a><br /><a href="/blog/">블로그</a>
             </div>
             <div class="col">
               <h4>회사</h4>
